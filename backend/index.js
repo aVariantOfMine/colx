@@ -3,7 +3,12 @@ const fs = require('fs');
 
 const app = express();
 
-app.use(express.urlencoded())
+// app.use(express.urlencoded())
+const bodyParser = require('body-parser');
+
+// Use body-parser middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 `
 Nodejs - backend
